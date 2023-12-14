@@ -5,27 +5,29 @@
         {{#unless @member}}
             <div class="gh-home">
                 <div class="gh-home-cta">
-                    <header class="gh-home-head">
-                        <div class="gh-home-brand">
-                            <a class="gh-home-logo" href="{{@site.url}}">
-                                {{#if @site.logo}}
-                                    <img src="{{@site.logo}}" alt="{{@site.title}}">
-                                {{else}}
-                                    {{@site.title}}
-                                {{/if}}
-                            </a>
+                    <div>
+                        <header class="gh-home-head">
+                            <div class="gh-home-brand">
+                                <a class="gh-home-logo" href="{{@site.url}}">
+                                    {{#if @site.logo}}
+                                        <img src="{{@site.logo}}" alt="{{@site.title}}">
+                                    {{else}}
+                                        {{@site.title}}
+                                    {{/if}}
+                                </a>
+                            </div>
+                            <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search>{{> "icons/search"}}</button>
+                        </header>
+                        <section class="gh-home-subscribe">
+                            <h2 class="gh-home-title">Introducing Fractals</h2>
                             <p class="gh-home-description">{{@site.description}}</p>
-                        </div>
-                        <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search>{{> "icons/search"}}</button>
-                    </header>
-
-                    <section class="gh-home-subscribe">
-                        <h2 class="gh-home-subscribe-title">Stay tuned</h2>
-                        <p class="gh-home-subscribe-description">Don’t miss out on the latest issues. Sign up now to get access to the library of members-only issues.</p>
-                        <a class="gh-home-subscribe-input" href="#/portal/signup" data-portal="signup">
-                            jamie@example.com <span>{{> icons/arrow-right}}</span>
-                        </a>
-                    </section>
+                            <h2 class="gh-home-subscribe-title">Stay in the know</h2>
+                            <p class="gh-home-subscribe-description">Sign up now to get the latest with Fractals and what will be released next.</p>
+                            <a class="gh-home-subscribe-input" href="#/portal/signup" data-portal="signup">
+                                jamie@example.com <span>{{> icons/arrow-right}}</span>
+                            </a>
+                        </section>
+                    </div>
 
                     <footer class="gh-home-footer">
                         <p class="gh-home-copyright">{{@site.title}} © {{date format="YYYY"}}</p>
